@@ -36,7 +36,7 @@ def join_game():
 
 
 
-def get_Fen():
+def get_fen():
     "extract FEN out of from page"
     time.sleep(3)
     # html_source = chrome.page_source
@@ -83,20 +83,9 @@ def click_square(square):
     action.click()
     action.perform()
 
-# fen = get_Fen()
-# fen = 'r1bqkb1r/ppp2ppp/2n5/3n4/8/2N2N2/PP1P1PPP/R1BQKB1R w KQkq - 2 7'
-# print(fen)
-# best_move = ask_stockfish(fen)
-# print(best_move)
-# chrome.get('https://en.lichess.org/MVZwniPS/black#78')
-# time.sleep(1)
-# click_square('f3')
-# time.sleep(1)
-# click_square('g4')
-
 join_game()
 while 1 == 1:
-    fen = get_Fen()
+    fen = get_fen()
     print(fen)
     best_move = ask_stockfish(fen)
     print(best_move)
